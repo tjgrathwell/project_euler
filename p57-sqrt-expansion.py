@@ -1,0 +1,1 @@
+def next((num,denom)):    # add one to the fraction    num += denom    # flip it over    num, denom = denom, num    # add one to that    num += denom    return (num, denom)    top_heavy = 0num, denom = (1,1)for i in xrange(1000):    num, denom = next((num, denom))    if len(str(num)) > len(str(denom)):        top_heavy += 1        print top_heavy
